@@ -9,6 +9,8 @@ const camera = new PiCamera({
   nopreview: true,
 });
 
+console.log(__dirname);
+
 export async function GET(request: Request) {
   camera
     .snap()
