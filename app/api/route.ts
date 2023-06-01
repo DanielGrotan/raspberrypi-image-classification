@@ -3,6 +3,7 @@ import PiCamera from "pi-camera";
 
 const camera = new PiCamera({
   mode: "photo",
+  output: `/test.jpg`,
   width: 640,
   height: 480,
   nopreview: true,
@@ -10,7 +11,7 @@ const camera = new PiCamera({
 
 export async function GET(request: Request) {
   camera
-    .snapDataUrl()
+    .snap()
     .then((result) => {
       console.log(result);
     })
