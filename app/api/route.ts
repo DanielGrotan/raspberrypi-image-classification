@@ -3,7 +3,7 @@ import PiCamera from "pi-camera";
 
 const camera = new PiCamera({
   mode: "photo",
-  output: `/test.jpg`,
+  output: `${__dirname}/test.jpg`,
   width: 640,
   height: 480,
   nopreview: true,
